@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import {
   HomeIcon,
   SearchIcon,
@@ -8,7 +7,7 @@ import {
   HeartIcon,
 } from '@heroicons/react/outline'
 
-const SideBar: NextPage = () => {
+const SideBar = () => {
   return (
     <div className="border-r border-gray-900 p-5 text-sm  text-gray-500">
       <div className="space-y-4 ">
