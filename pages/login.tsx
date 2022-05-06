@@ -13,7 +13,7 @@ const login = ({ providers }: any) => {
         <button
           key={provider.name}
           className="rounded-full bg-[#18d860] p-5 text-white"
-          onClick={() => signIn(provider.id, { callbackUrl: 'localhost:3000' })}
+          onClick={() => signIn(provider.id, { callbackUrl: '/' })}
         >
           Login with {provider.name}
         </button>
