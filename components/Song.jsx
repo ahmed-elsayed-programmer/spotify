@@ -3,7 +3,7 @@ import useSpotify from '../hooks/useSpotify'
 import { millistoMiutes } from '../lib/time'
 import { currentTrackIdState, isPlayingState } from '../atoms/songAtom'
 
-const Song = ({ track, order }: any) => {
+const Song = ({ track, order }) => {
   const spotifyApi = useSpotify()
   const [currentTrackId, setCurrentTrackId] =
     useRecoilState(currentTrackIdState)

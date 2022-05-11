@@ -20,7 +20,7 @@ const SideBar = () => {
 
   useEffect(() => {
     if (spotifyApi.getAccessToken()) {
-      spotifyApi.getUserPlaylists().then((data: any) => {
+      spotifyApi.getUserPlaylists().then((data) => {
         setPlaylist(data.body.items)
       })
     }

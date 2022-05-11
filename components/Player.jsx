@@ -29,9 +29,9 @@ const Player = () => {
 
   const fetchSongInfo = async () => {
     if (!songInfo) {
-      SpotifyApi.getMyCurrentPlayingTrack().then((data: any) => {
+      SpotifyApi.getMyCurrentPlayingTrack().then((data) => {
         setCurrentTrackId(data.body.item.id)
-        SpotifyApi.getMyCurrentPlayBackState().then((data: any) => {
+        SpotifyApi.getMyCurrentPlayBackState().then((data) => {
           console.log('now playing :', data.body)
           setIsPlaying(data.body.is_playing)
         })
@@ -69,7 +69,7 @@ const Player = () => {
 
   const debounceAdjustVolume = useCallback(() => {
     debounce((volume) => {
-      SpotifyApi.setVolume(volume).catch((err: any) => console.log(err))
+      SpotifyApi.setVolume(volume).catch((err) => console.log(err))
     }, 500)
   }, [volume])
 

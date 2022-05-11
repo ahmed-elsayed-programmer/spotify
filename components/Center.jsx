@@ -32,10 +32,10 @@ const Center = () => {
   useEffect(() => {
     spotifyApi
       .getPlaylist(playlistId)
-      .then((data: any) => {
+      .then((data) => {
         setPlaylist(data.body)
       })
-      .catch((err: any) => console.log('something went wrong !', err))
+      .catch((err) => console.log('something went wrong !', err))
   }, [spotifyApi, playlistId])
   return (
     <div className="scrollbar h-screen flex-grow overflow-y-scroll">
